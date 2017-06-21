@@ -114,14 +114,14 @@ int cgiMain()
 }*/
 
 
-	//添加课程信息
-	/*sprintf(sql, "insert into Course values(%d,'%s',%d)",atoi(Cno),Cname,atoi(Credit));
+
+	sprintf(sql, "insert into stu values(%d,'%s','%s',%d,'%s')",atoi(stuId),name,Ssex,atoi(age),Ssdept);
 	if (mysql_real_query(db, sql, strlen(sql) + 1) != 0)
 	{
 		fprintf(cgiOut, "%s\n", mysql_error(db));
 		mysql_close(db);
 		return -1;
-	}*/
+	}
 
 
 	fprintf(cgiOut, "add student ok!\n");
