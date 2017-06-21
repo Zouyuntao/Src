@@ -36,11 +36,11 @@ int cgiMain()
 
 	if (name[0] == '*')
 	{
-		sprintf(sql, "select * from stu,SC,Course where stu.stuId = SC.stuId and SC.Cno = Course.Cno");
+		sprintf(sql, "select * from stu,SC,Course where stu.stuId = SC.stuId and SC.Cno = Course.Cno and state != '0'");
 	}
 	else
 	{
-		sprintf(sql, "select * from stu,Course,SC where name  = '%s'and stu.stuId = SC.stuId and SC.Cno = Course.Cno", name);
+		sprintf(sql, "select * from stu,Course,SC where name  = '%s'and stu.stuId = SC.stuId and SC.Cno = Course.Cno and state != '0'", name);
 	}
 
 
